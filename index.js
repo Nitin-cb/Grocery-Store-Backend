@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-// Multer setup for file uploads
+// Multer setup for file uploads 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
@@ -31,7 +31,7 @@ app.post('/send-email', upload.single('resume'), (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'careers@almadinauae.ae', // Replace with your receiving email
+    to: 'sreeragmenon2001@gmail.com', // Replace with your receiving email
     subject: `Job Application from ${name}`,
     text: `
       Name: ${name}
